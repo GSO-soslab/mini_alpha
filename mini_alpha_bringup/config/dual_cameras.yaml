@@ -1,10 +1,9 @@
-# IMPORTANT: Check v4l2-ctl --list-devices for correct ID
 # explore camera
 /mini_alpha/explore_camera_node:
   ros__parameters:
     ### Video stream settings ###
     video:
-      id: 0
+      product_name: 'exploreHD'
       width: 640
       height: 360
       framerate: 15
@@ -65,7 +64,7 @@
   ros__parameters:
     ### Video stream settings ###
     video:
-      id: 4
+      product_name: 'H264'
       width: 640
       height: 360
       framerate: 15

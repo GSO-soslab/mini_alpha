@@ -1,0 +1,60 @@
+# explore camera
+/mini_alpha/explore_camera_node:
+  ros__parameters:
+    ### Video stream settings ###
+    video:
+      product_name: 'exploreHD'
+      width: 640
+      height: 360
+      framerate: 15
+      format: 'MJPG'
+    ### Configure which auxiliary processing streams to enable ###
+    aux_process:
+      img_raw: False
+      img_raw_mono: False
+      img_raw_framerate: 15
+      img_calibrated: False
+      img_calibrated_framerate: 15
+    ### Settings for the low-bandwidth compressed stream ###
+    # (0 target_fps will disable this topic)
+    compression:
+      width: 320
+      height: 240
+      target_fps: 0
+      jpeg_quality: 75
+    ### Camera controls and calibrations ###
+    camera:
+      # hardware control
+      # --- Exposure Controls (Manual) ---
+      auto_exposure: True                # MUST be False for manual control.
+      exposure_time: 156                  # TUNE THIS VALUE: Manually set for correct brightness.
+      gain: 0                             # Minimum digital gain to reduce noise.
+      # --- White Balance Controls (Manual) ---
+      white_balance_automatic: True      # MUST be False for manual control.
+      white_balance_temperature: 4600     # TUNE THIS VALUE: Manually set for correct color.
+      # --- Enhancement & Compensation Filters (Disabled/Minimal) ---
+      sharpness: 0                        # Minimum sharpness (disables edge enhancement).
+      backlight_compensation: 0           # Minimum (disabled).
+      power_line_frequency: 0             # Disabled. May cause flicker under AC lights.
+      # --- Color & Tone Controls (Neutral/Default) ---
+      brightness: 0                       # Neutral brightness.
+      contrast: 32                        # Lower contrast for a "flatter" image.
+      saturation: 64                      # Neutral color saturation.
+      hue: 0                              # Neutral hue.
+      gamma: 100                          # Default gamma curve.
+      # camera calibration
+      # explore air
+      intrinsics:
+        fx: 0.0
+        fy: 0.0
+        cx: 0.0
+        cy: 0.0
+      distortion: [0.0, 0.0, 0.0, 0.0, 0.0]
+      fisheye: True
+      undistort_crop: True
+    ### AprilTag detection ###
+    apriltag:
+      enable: False
+    ### ROS related ###
+    ros:
+      frame_id: "explore_camera_frame" # Unique TF frame_id
