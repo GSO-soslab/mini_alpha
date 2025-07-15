@@ -10,7 +10,7 @@
             # 
             mode: 1
             #
-            channel: 2
+            channel: 1
 
         current:
             # brief: device address
@@ -22,7 +22,7 @@
             # 
             mode: 1
             #
-            channel: 1
+            channel: 2
 
         system:
             #

@@ -21,10 +21,10 @@ def generate_launch_description():
 
     dual_camera_params_path = os.path.join(robot_param_path, 'config', 'dual_cameras.yaml')
 
-    exploreHD_camera_node = Node(
+    explore_camera_node = Node(
         package='dwe_camera_driver',
         executable='camera_node',
-        name='exploreHD_camera_node',
+        name='explore_camera_node',
         namespace=robot_name,
         output='screen',
         parameters=[dual_camera_params_path],
@@ -52,7 +52,7 @@ def generate_launch_description():
     return LaunchDescription([
         TimerAction(
             period=PythonExpression([delay]),
-            actions=[exploreHD_camera_node, usbpcb_camera_node]
+            actions=[explore_camera_node, usbpcb_camera_node]
         ),
         
     ])
