@@ -10,7 +10,7 @@
             # 
             mode: 1
             #
-            channel: 2
+            channel: 1
 
         current:
             # brief: device address
@@ -22,7 +22,7 @@
             # 
             mode: 1
             #
-            channel: 1
+            channel: 2
 
         system:
             #
@@ -36,7 +36,7 @@
             #
             current_scale: 0.066
             #
-            voltage_warn: 15.0
+            voltage_warn: 13.0
 
         ros:
             #
