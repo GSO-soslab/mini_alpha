@@ -41,19 +41,28 @@ def generate_launch_description():
     # # robot localization
     localization = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(get_package_share_directory(robot_bringup), 'launch','include','localization.launch.py')]),
-        launch_arguments = {'arg_robot_name': arg_robot_name}.items()  
+        launch_arguments = {
+            'arg_robot_name': arg_robot_name,
+            'delay': '2.0'
+            }.items()  
     )
 
     #mvp_control
     mvp_control = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(get_package_share_directory(robot_bringup), 'launch','include','mvp_control.launch.py')]),
-        launch_arguments = {'arg_robot_name': arg_robot_name}.items()  
+        launch_arguments = {
+            'arg_robot_name': arg_robot_name,
+            'delay': '5.0'
+            }.items()  
     )
 
      #mvp_mission
     mvp_mission = IncludeLaunchDescription(
         PythonLaunchDescriptionSource([os.path.join(get_package_share_directory(robot_bringup), 'launch','include','mvp_mission.launch.py')]),
-        launch_arguments = {'arg_robot_name': arg_robot_name}.items()  
+        launch_arguments = {
+            'arg_robot_name': arg_robot_name,
+            'delay': '5.0'
+            }.items()    
     )
 
 

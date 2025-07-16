@@ -70,8 +70,11 @@ def generate_launch_description():
             executable="pressure_sensor_node",
             namespace=robot_name,
             name="pressure_sensor_node",
+            remappings=[
+                    ('depth', 'depth/odometry')
+                ],
             parameters=[
-                {'frame_id': robot_name + '/odom'},
+                {'frame_id': robot_name + '/world'},
                 {'child_frame_id': robot_name + '/pressure'}]
         ),
 
