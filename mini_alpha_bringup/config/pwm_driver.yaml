@@ -1,7 +1,7 @@
 /mini_alpha/pwm_driver_node:
   ros__parameters:
     # pwm_frequency: 47.2
-    mcu_installed: true
+    mcu_installed: false
     pwm_frequency: 47.2
 
     pwm_ms_bias: -0.05
