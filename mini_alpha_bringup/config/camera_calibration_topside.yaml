@@ -8,8 +8,7 @@
     # Enable/disable different processing pipelines.
     aux_process:
       img_raw: True
-      img_raw_mono: True
-      img_raw_framerate: 15
+      img_raw_framerate: 10
       img_calibrated: False
       img_calibrated_framerate: 15
 
