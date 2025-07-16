@@ -33,6 +33,7 @@ def generate_launch_description():
         name='cameracalibrator',
         namespace=robot_name,
         output='screen',
+        prefix='xterm -e',
         arguments=[
             '--size', '6x8',
             '--square', '0.028',
