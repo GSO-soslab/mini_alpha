@@ -3,8 +3,7 @@
   ros__parameters:
     ### Video stream settings ###
     video:
-      # product_name: 'exploreHD'
-      product_name: 'stellarHD'
+      product_name: 'exploreHD'
       width: 640
       height: 360
       framerate: 15
