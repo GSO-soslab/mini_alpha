@@ -2,9 +2,6 @@ import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch_ros.actions import Node
-from launch.substitutions import LaunchConfiguration
-from launch.actions import TimerAction
-from launch.substitutions import PythonExpression
 
 def generate_launch_description():
     """
@@ -17,7 +14,7 @@ def generate_launch_description():
     # The package name is 'dwe_camera' as defined in setup.py
     robot_param_path = get_package_share_directory(robot_bringup)
 
-    dual_camera_params_path = os.path.join(robot_param_path, 'config', 'camera_calibration_vehicle.yaml')
+    calibration_camera_vehicle_params_path = os.path.join(robot_param_path, 'config', 'camera_calibration_vehicle.yaml')
 
     explore_camera_node = Node(
         package='dwe_camera_driver',
@@ -25,7 +22,7 @@ def generate_launch_description():
         name='explore_camera_node',
         namespace=robot_name,
         output='screen',
-        parameters=[dual_camera_params_path],
+        parameters=[calibration_camera_vehicle_params_path],
         remappings=[
             ('image/compressed', 'exploreHD/image/compressed'),
             ('image_lowbw/compressed', 'exploreHD/image_lowbw/compressed'),

@@ -1,0 +1,27 @@
+/mini_alpha/explore_camera_remote_node:
+  ros__parameters:
+    # --- Subscription Settings ---
+    # The compressed image topic to subscribe to for processing.
+    subscribe_topic: "/mini_alpha/exploreHD/image/compressed"
+
+    # --- Auxiliary Processing ---
+    # Enable/disable different processing pipelines.
+    aux_process:
+      img_raw: True
+      img_raw_mono: True
+      img_raw_framerate: 15
+      img_calibrated: False
+      img_calibrated_framerate: 15
+
+    # --- AprilTag Detection Settings ---
+    apriltag:
+      enable: False
+
+    # --- General Settings ---
+    # ROS frame_id to use for published topics. Should match the source frame_id.
+    ros:
+      frame_id: "dwe_camera_frame"
+
+    # JPEG quality for any newly compressed topics (e.g., calibrated, apriltag).
+    compression:
+      jpeg_quality: 90
