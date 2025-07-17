@@ -8,13 +8,6 @@
       height: 360
       framerate: 15
       format: 'MJPG'
-    ### Configure which auxiliary processing streams to enable ###
-    aux_process:
-      img_raw: False
-      img_raw_mono: False
-      img_raw_framerate: 15
-      img_calibrated: False
-      img_calibrated_framerate: 15
     ### Settings for the low-bandwidth compressed stream ###
     # (0 target_fps will disable this topic)
     compression:
@@ -42,19 +35,6 @@
       saturation: 64                      # Neutral color saturation.
       hue: 0                              # Neutral hue.
       gamma: 100                          # Default gamma curve.
-      # camera calibration
-      # explore air
-      intrinsics:
-        fx: 317.240966
-        fy: 317.035766
-        cx: 272.986072
-        cy: 224.098703
-      distortion: [-0.319352, 0.077184, -0.001019, -0.000084, 0.000000]
-      fisheye: False
-      undistort_crop: False
-    ### AprilTag detection ###
-    apriltag:
-      enable: False
     ### ROS related ###
     ros:
       frame_id: "explore_camera_frame" # Unique TF frame_id
@@ -69,13 +49,6 @@
       height: 360
       framerate: 15
       format: 'MJPG'
-    ### Configure which auxiliary processing streams to enable ###
-    aux_process:
-      img_raw: False
-      img_raw_mono: False
-      img_raw_framerate: 15
-      img_calibrated: False
-      img_calibrated_framerate: 15
     ### Settings for the low-bandwidth compressed stream ###
     # (0 target_fps will disable this topic)
     compression:
@@ -103,19 +76,6 @@
       saturation: 64                      # Neutral color saturation.
       hue: 0                              # Neutral hue.
       gamma: 100                          # Default gamma curve.
-      # camera calibration
-      # usbpcb camera air
-      intrinsics:
-        fx: 344.442625
-        fy: 344.225921
-        cx: 331.977460
-        cy: 186.828514
-      distortion: [0.012006, -0.002764, 0.000038, 0.001801, 0.000000]
-      fisheye: False
-      undistort_crop: False
-    ### AprilTag detection ###
-    apriltag:
-      enable: False
     ### ROS related ###
     ros:
       frame_id: "usbpcb_camera_frame" # Unique TF frame_id

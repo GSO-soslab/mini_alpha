@@ -8,13 +8,6 @@
       height: 360
       framerate: 15
       format: 'MJPG'
-    ### Configure which auxiliary processing streams to enable ###
-    aux_process:
-      img_raw: False
-      img_raw_mono: False
-      img_raw_framerate: 15
-      img_calibrated: False
-      img_calibrated_framerate: 15
     ### Settings for the low-bandwidth compressed stream ###
     # (0 target_fps will disable this topic)
     compression:
@@ -42,16 +35,6 @@
       saturation: 64                      # Neutral color saturation.
       hue: 0                              # Neutral hue.
       gamma: 100                          # Default gamma curve.
-      # camera calibration
-      # explore air
-      intrinsics:
-        fx: 0.0
-        fy: 0.0
-        cx: 0.0
-        cy: 0.0
-      distortion: [0.0, 0.0, 0.0, 0.0, 0.0]
-      fisheye: True
-      undistort_crop: True
     ### AprilTag detection ###
     apriltag:
       enable: False
