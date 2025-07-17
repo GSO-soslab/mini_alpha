@@ -4,6 +4,12 @@
     # The compressed image topic to subscribe to for processing.
     subscribe_topic: "/mini_alpha/exploreHD/image/compressed"
 
+    video:
+      product_name: 'exploreHD'
+      width: 640
+      height: 360
+      framerate: 15
+      format: 'MJPG'
     # --- Auxiliary Processing ---
     # Enable/disable different processing pipelines.
     aux_process:

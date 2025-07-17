@@ -22,10 +22,10 @@ def generate_launch_description():
         output='screen',
         parameters=[apriltag_detection_topside_params_path],
         remappings=[
-            ('apriltag_detection/compressed', 'apriltag_detection/image/compressed')
+            ('image_calibrated/compressed', 'exploreHD/image_calibrated/compressed'),
+            ('apriltag_detection/compressed', 'exploreHD/apriltag_detection/image/compressed')
         ]
     )
-
 
     return LaunchDescription([
         explore_camera_remote_node,

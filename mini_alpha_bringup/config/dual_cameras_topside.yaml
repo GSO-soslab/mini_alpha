@@ -4,6 +4,13 @@
     # The compressed image topic to subscribe to for processing.
     subscribe_topic: "/mini_alpha/exploreHD/image/compressed"
 
+    video:
+      product_name: 'exploreHD'
+      width: 640
+      height: 360
+      framerate: 15
+      format: 'MJPG'
+
     # --- Auxiliary Processing ---
     # Enable/disable different processing pipelines.
     aux_process:
@@ -28,10 +35,11 @@
     # Camera calibration
     camera:
       intrinsics:
-        fx: 0.0
-        fy: 0.0
-        cx: 0.0
-        cy: 0.0
+        fx: 308.393444
+        fy: 308.321093
+        cx: 339.296269
+        cy: 193.002004
+      # distortion: [-0.058490, -0.013213, 0.001841, 0.000177]
       distortion: [0.0, 0.0, 0.0, 0.0, 0.0]
       fisheye: False
       undistort_crop: False

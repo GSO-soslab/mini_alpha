@@ -33,7 +33,7 @@ def generate_launch_description():
         name='cameracalibrator',
         namespace=robot_name,
         output='screen',
-        prefix='xterm -e',
+        prefix='gnome-terminal --',
         arguments=[
             '--size', '6x8',
             '--square', '0.028',
@@ -49,7 +49,6 @@ def generate_launch_description():
             ('camera', 'dwe_camera')
         ]
     )
-
 
     return LaunchDescription([
         explore_camera_remote_node,
