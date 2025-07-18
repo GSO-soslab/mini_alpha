@@ -64,7 +64,7 @@ def generate_launch_description():
         PythonLaunchDescriptionSource(
             os.path.join(
                 get_package_share_directory(robot_bringup), 
-                'launch','include','camera.launch.py')),
+                'launch','include','cameras_vehicle.launch.py')),
         launch_arguments = {
             'arg_robot_name': arg_robot_name,
             'delay': '10.0'
