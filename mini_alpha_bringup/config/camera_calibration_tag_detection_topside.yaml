@@ -34,11 +34,11 @@
     # Camera calibration
     camera:
       intrinsics:
-        fx: 0.0
-        fy: 0.0
-        cx: 0.0
-        cy: 0.0
-      distortion: [0.0, 0.0, 0.0, 0.0]
+        fx: 310.094771
+        fy: 310.324289
+        cx: 334.873355
+        cy: 189.431153
+      distortion: [-0.069459, 0.008344, -0.010927, 0.006360]
       fisheye: True
       undistort_crop: True
 
