@@ -15,6 +15,17 @@ def generate_launch_description():
     arg_robot_name = 'mini_alpha'
     robot_bringup = arg_robot_name + '_bringup'
 
+    foxglove = IncludeLaunchDescription(
+        XMLLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory('foxglove_bridge'),
+                'launch/foxglove_bridge_launch.xml')),
+        launch_arguments={
+            'namespace': arg_robot_name,
+            'delay': '1.0'
+        }.items()
+    )
+
     camera_remote_node = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(
@@ -23,5 +34,6 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        camera_remote_node
+        camera_remote_node,
+        foxglove
     ])

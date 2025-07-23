@@ -19,7 +19,7 @@ def generate_launch_description():
     # The package name is 'dwe_camera' as defined in setup.py
     robot_param_path = get_package_share_directory(robot_bringup)
 
-    dual_camera_params_path = os.path.join(robot_param_path, 'config', 'dual_cameras.yaml')
+    dual_camera_params_path = os.path.join(robot_param_path, 'config', 'dual_cameras_vehicle.yaml')
 
     explore_camera_node = Node(
         package='dwe_camera_driver',
