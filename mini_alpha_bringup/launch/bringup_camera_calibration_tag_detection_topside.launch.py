@@ -35,5 +35,5 @@ def generate_launch_description():
 
     return LaunchDescription([
         camera_remote_node,
-        foxglove
+        # foxglove
     ])
