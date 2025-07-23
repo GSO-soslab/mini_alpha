@@ -22,6 +22,18 @@ def generate_launch_description():
                 'launch','include','cameras_topside.launch.py')), 
     )
 
+    foxglove = IncludeLaunchDescription(
+        XMLLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory('foxglove_bridge'),
+                'launch/foxglove_bridge_launch.xml')),
+        launch_arguments={
+            'namespace': arg_robot_name,
+            'delay': '1.0'
+        }.items()
+    )
+
     return LaunchDescription([
-        camera_remote_node
+        camera_remote_node,
+        foxglove
     ])
