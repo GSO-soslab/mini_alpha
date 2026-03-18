@@ -60,6 +60,17 @@ def generate_launch_description():
             }.items()  
     )
 
+    dvl = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory(robot_bringup), 
+                'launch','include','waterlinked_dvl.launch.py')),
+        launch_arguments = {
+            'arg_robot_name': arg_robot_name,
+            'delay': '8.0'
+            }.items()  
+    )
+
     camera = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(
@@ -76,5 +87,6 @@ def generate_launch_description():
         xsens,
         pressure,
         power,
+        dvl,
         camera
     ])
