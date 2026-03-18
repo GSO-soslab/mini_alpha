@@ -1,6 +1,6 @@
-/alpha_rise/waterlinked_dvl:
+/mini_alpha/waterlinked_dvl:
   ros__parameters:
-    ip: 192.168.2.102
+    ip: 192.168.2.101
     port: 16171
     frame_id: alpha_rise/dvl
     velocity_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]

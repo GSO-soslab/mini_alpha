@@ -88,5 +88,5 @@ def generate_launch_description():
         pressure,
         power,
         dvl,
-        camera
+        # camera
     ])

@@ -17,7 +17,6 @@ def generate_launch_description():
     param_config = os.path.join(
         get_package_share_directory(robot_bringup),
         'config',
-        'sensors',
         'waterlinked_dvl.yaml'
     )
     
