@@ -83,10 +83,10 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        # foxglove,
+        foxglove,
         xsens,
         pressure,
         power,
         dvl,
-        # camera
+        camera
     ])
